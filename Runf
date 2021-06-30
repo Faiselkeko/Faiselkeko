@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+cd $HOME/znnnz
+token="1881220463:AAGeI4dFEqwWn6iU3pE_bQbrJJNG6cDKwAw"
+while(true) do
+rm -fr ../.telegram-cli
+function print_logo() {
+echo " BOT"
+}
+if [ ! -f ./tg ]; then
+echo "TG IS NOT FIND IN FILES BOT"
+exit 1
+fi
+if [ ! $token ]; then
+echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE INFO.LUA \e[0m"
+exit 1
+fi
+print_logo
+echo -e "\033[38;5;208m"
+echo -e "                                                  "
+echo -e "\033[0;00m"
+echo -e "\e[36m"
+./tg -s ./FAEDER.lua -p PROFILE --bot=$token
+done
